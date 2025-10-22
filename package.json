@@ -1,0 +1,79 @@
+{
+  "name": "chess-timekeeper",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "serve:ssr:chess-timekeeper": "node dist/chess-timekeeper/server/server.mjs"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": "*.html",
+        "options": {
+          "parser": "angular"
+        }
+      }
+    ]
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^20.3.6",
+    "@angular/cdk": "^20.2.9",
+    "@angular/common": "^20.3.0",
+    "@angular/compiler": "^20.3.0",
+    "@angular/core": "^20.3.0",
+    "@angular/forms": "^20.3.0",
+    "@angular/platform-browser": "^20.3.0",
+    "@angular/platform-server": "^20.3.0",
+    "@angular/pwa": "^20.3.6",
+    "@angular/router": "^20.3.0",
+    "@angular/service-worker": "^20.3.0",
+    "@angular/ssr": "^20.3.1",
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/cli": "^7.4.3",
+    "@capacitor/core": "^7.4.3",
+    "@capacitor/ios": "^7.4.3",
+    "@primeuix/themes": "^1.2.5",
+    "@tailwindcss/postcss": "^4.1.15",
+    "angulartics2": "^14.1.0",
+    "eslint": "^9.38.0",
+    "express": "^5.1.0",
+    "howler": "^2.2.4",
+    "ng2-adsense": "^14.0.0",
+    "prettier": "^3.6.2",
+    "primeclt": "^0.1.5",
+    "primeicons": "^7.0.0",
+    "primeng": "^20.2.0",
+    "rxjs": "~7.8.0",
+    "tailwindcss-primeui": "^0.6.1",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.15.0"
+  },
+  "devDependencies": {
+    "@angular/build": "^20.3.1",
+    "@angular/cli": "^20.3.1",
+    "@angular/compiler-cli": "^20.3.0",
+    "@types/electron": "^1.4.38",
+    "@types/express": "^5.0.1",
+    "@types/jasmine": "~5.1.0",
+    "@types/node": "^20.17.19",
+    "autoprefixer": "^10.4.21",
+    "electron": "^38.4.0",
+    "electron-builder": "^26.0.12",
+    "jasmine-core": "~5.9.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.15",
+    "typescript": "~5.9.2"
+  }
+}
