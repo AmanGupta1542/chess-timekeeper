@@ -1,0 +1,20 @@
+:host { display: block; }
+/* theme classes */
+.light { --bg: #f8fafc; --card: #ffffff; --text: #0f172a; }
+.dark  { --bg: #0f172a; --card: #0b1220; --text: #e6eef8; }
+.wooden { --bg: #f5efe6; --card: linear-gradient(135deg,#f6ead2,#eadfc2); --text: #3b2f2f; }
+
+.light, .dark, .wooden { background: var(--bg); color: var(--text); }
+.light .player, .dark .player, .wooden .player { background: var(--card); }
+
+.player { display:flex; flex-direction:column; align-items:center; justify-content:center; }
+.player.active-player { box-shadow: 0 8px 28px rgba(99,102,241,0.18); transform: translateY(-4px); border: 2px solid rgba(99,102,241,0.18); }
+.timer { line-height: 0.9; }
+
+/* wooden theme special */
+.wooden .player { background: linear-gradient(180deg,#fff8ea,#f3e3c9); border: 1px solid #dec69d; }
+
+/* small screens tweaks */
+@media (max-width: 640px) {
+.timer { font-size: 3.5rem; }
+}
