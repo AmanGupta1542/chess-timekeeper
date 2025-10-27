@@ -10,9 +10,13 @@ import { AdsenseModule } from 'ng2-adsense';
 import { ADSENSE_CONFIG, AdsenseConfig } from '../../app.config';
 import { environment } from '../../../environments/environment';
 
+import { ButtonModule } from 'primeng/button';
+import { AvatarModule } from 'primeng/avatar';
+import { CheckboxModule } from 'primeng/checkbox';
+
 @Component({
   selector: 'app-landing',
-  imports: [CommonModule, AdsenseModule, FormsModule, SelectModule],
+  imports: [CommonModule, AdsenseModule, CheckboxModule, ButtonModule, AvatarModule, FormsModule, SelectModule],
   templateUrl: './landing.html',
   styleUrl: './landing.scss'
 })
@@ -72,7 +76,7 @@ export class Landing implements OnInit, OnDestroy {
     try {
       this.alarmAudio = new Audio();
       // small beep as data-url not containing actual beep by default; you can replace src with a real file
-      this.alarmAudio.src = 'data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAESsAACJWAAACABAAZGF0YQAAAAA=';
+      this.alarmAudio.src = 'assets/sounds/tap-sound.mp3';
     } catch (e) {
       this.alarmAudio = null;
     }
@@ -175,7 +179,7 @@ export class Landing implements OnInit, OnDestroy {
     this.running = false;
     this.clearInterval();
     if (this.soundOn && this.alarmAudio) {
-      try { this.alarmAudio.play(); } catch (e) { /* ignore */ }
+      try { this.alarmAudio.play(); } catch (e) { console.log(e) }
     }
   }
 

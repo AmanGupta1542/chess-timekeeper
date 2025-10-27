@@ -1,4 +1,4 @@
 export const environment = {
-    imageUrlPrefix: '',   // eg. /chess-timekeeper
+    imageUrlPrefix: '.',   // eg. /chess-timekeeper
     baseApiUrl: '',
 };
